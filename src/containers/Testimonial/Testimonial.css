@@ -1,0 +1,171 @@
+/* Root */
+.app__testimonial {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Carousel Card --- */
+.app__testimonial-carousel {
+  margin: 2rem 0;
+  width: 50%;
+  min-height: 250px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  text-align: left;
+  gap: 2rem;
+  flex-wrap: nowrap;
+}
+
+.app__testimonial-carousel:hover {
+  transform: translateY(-4px);
+}
+
+/* --- Testimonial Content --- */
+.app__testimonial-content {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.app__testimonial-content p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+  font-style: italic;
+  max-width: 400px;
+}
+
+.app__testimonial-content h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.app__testimonial-content h5 {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* --- Navigation Buttons --- */
+.app__testimonials-btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+
+.app__testimonials-btns div {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.app__testimonials-btns div:hover {
+  background-color: var(--secondary-color);
+}
+
+.app__testimonials-btns svg {
+  width: 24px;
+  height: 24px;
+  color: var(--secondary-color);
+  transition: color 0.2s ease;
+}
+
+.app__testimonials-btns div:hover svg {
+  color: #fff;
+}
+
+/* --- Heading --- */
+.head-text {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--black-color);
+  margin-top: 2rem;
+}
+
+.head-text span {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* --- Responsive Breakpoints --- */
+@media screen and (max-width: 850px) {
+  .app__testimonial-carousel {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .head-text {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app__testimonial-carousel {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .app__testimonial-content {
+    padding: 1rem;
+  }
+
+  .app__testimonials-btns {
+    gap: 0.5rem;
+  }
+}
+
+/* Avatar on the right */
+.app__testimonial-avatar {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--secondary-color);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-avatar:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  .app__testimonial-carousel {
+    flex-direction: column; /* ✅ Stack vertically on small screens */
+    text-align: center;
+  }
+
+  .app__testimonial-avatar {
+    order: -1; /* ✅ Move image to top */
+    margin-bottom: 1rem;
+  }
+
+  .app__testimonial-content {
+    align-items: center;
+    padding: 1rem;
+  }
+}

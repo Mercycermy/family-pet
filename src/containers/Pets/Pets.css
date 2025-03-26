@@ -1,0 +1,451 @@
+.app__pets {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app__work-filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 2rem 0 1rem 0;
+
+  .app__work-filter-item {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    color: black;
+    font-weight: 800;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--secondary-color);
+      color: #fff;
+    }
+
+    @media screen and (min-width: 2000px) {
+      padding: 1rem 2rem;
+      border-radius: 0.85rem;
+    }
+  }
+
+  .item-active {
+    background-color: var(--secondary-color);
+    color: #fff;
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-wrap: wrap;
+  }
+}
+
+.app__work-portfolio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  .app__work-item {
+    width: 200px;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    }
+
+    @media screen and (min-width: 2000px) {
+      width: 470px;
+      padding: 1.25rem;
+    }
+
+    @media screen and (max-width: 300px) {
+      min-width: 100%;
+      margin: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 300px) {
+    width: 100%;
+  }
+}
+
+.app__work-img {
+  width: 100%;
+  height: 230px;
+  position: relative;
+
+  img {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media screen and (min-width: 2000px) {
+    height: 350px;
+  }
+}
+
+.app__work-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  opacity: 0;
+
+  div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    margin: 1rem;
+    font-family: var(--font-base);
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    svg {
+      width: 50%;
+      height: 50%;
+      color: var(--white-color);
+      transition: all 0.3s ease;
+    }
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
+.app__work-touched {
+  opacity: 1;
+}
+
+.app__work-content {
+  padding: 0.5rem;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+
+  h4 {
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+
+  h4, p {
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+
+  .app__work-tag {
+    position: absolute;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    top: -25px;
+    border-radius: 10px;
+  }
+}
+
+.app__work-touched-nowrap {
+  .app__work-content {
+    h4, p {
+      white-space: unset;
+    }
+  }
+}
+
+/* Wrapper */
+.pet-detail-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Helvetica", sans-serif;
+}
+
+/* Back Button */
+.pet-detail-header {
+  margin-bottom: 1rem;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #555;
+  cursor: pointer;
+}
+
+/* Main Card */
+.pet-detail-card {
+  display: flex;
+  gap: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  padding: 2rem;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Image Section */
+.pet-image-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-slider {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-image-wrapper {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.arrow-button:hover {
+  background-color:var(--primary-color);
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 16px rgba(255, 226, 131, 0.4);
+}
+
+.arrow-button.left {
+  left: -20px;
+}
+
+.arrow-button.right {
+  right: -20px;
+}
+
+.thumbnail-row {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.thumbnail.active {
+  border-color: #fcef7d;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    transform: translateY(-50%) scale(1.1);
+  }
+}
+
+.arrow-button:hover {
+  animation: pulse 0.4s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .main-image-wrapper {
+    max-width: 350px;
+  }
+
+  .arrow-button {
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
+
+  .thumbnail {
+    width: 50px;
+    height: 50px;
+  }
+
+  .arrow-button.left {
+    left: -10px;
+  }
+
+  .arrow-button.right {
+    right: -10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-image-wrapper {
+    max-width: 300px;
+  }
+
+  .arrow-button {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .thumbnail {
+    width: 45px;
+    height: 45px;
+  }
+
+  .arrow-button.left,
+  .arrow-button.right {
+    display: none; /* Optional: hide arrows for smallest screens */
+  }
+}
+/* Info Section */
+.pet-info-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 250px; /* Ensures text section doesn’t get too narrow */
+}
+
+.pet-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+.breed-detail-section  {
+  font-size: 1.rem;
+  margin: 6px;
+}
+.pet-description {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-action {
+  margin-top: 1.5rem;
+}
+
+.contact-button {
+  background: var(--primary-color);
+  color:black;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 218, 148, 0.3);
+}
+
+.contact-button:hover {
+  background: var(--lightGray-color);
+}
+/* Responsive Styles */
+
+/* On small screens */
+@media (max-width: 768px) {
+  .pet-detail-card {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .pet-image-section {
+    margin-bottom: 1rem;
+  }
+
+  .main-image {
+    max-width: 100%;
+  }
+
+  .thumbnail-row {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .thumbnail {
+    width: 40px;
+    height: 40px;
+  }
+
+  .pet-title {
+    font-size: 1.5rem;
+  }
+
+  .pet-description {
+    font-size: 0.9rem;
+  }
+
+  .contact-button {
+    width: 40%;
+    padding: 10px 0;
+  }
+}
+
+/* On extra small screens (mobile phones) */
+@media (max-width: 480px) {
+  .pet-detail-wrapper {
+    padding: 1rem;
+  }
+
+  .pet-title {
+    font-size: 1.3rem;
+  }
+
+  .pet-description {
+    font-size: 0.8rem;
+  }
+
+  .contact-button {
+    font-size: 0.9rem;
+    padding: 5px 0;
+  }
+}

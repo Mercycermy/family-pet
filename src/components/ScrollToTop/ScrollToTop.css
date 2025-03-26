@@ -1,0 +1,88 @@
+.scroll-top {
+    position: fixed;
+    bottom: 2em;
+    right: 4em;
+    background-color: transparent;
+  }
+  
+  @media (max-width: 300px) {
+    .scroll-top {
+      display: none;
+    }
+  }
+
+/* Define the floating (bouncing) animation */
+.telegram-icon-floating {
+  animation: floatAndBounce 2s infinite ease-in-out;
+}
+
+/* Keyframe for the floating bounce effect */
+@keyframes floatAndBounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.scroll-top {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Telegram and Phone Icon Containers */
+.telegram-icon-container,
+.phone-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px; /* Default size */
+  height: 60px; /* Default size */
+  border: 4px solid #c19c07; /* Stroke color */
+  border-radius: 50%; /* Circular border */
+  background-color: #ffffff; /* Background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for polished look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.telegram-icon-container:hover,
+.phone-icon-container:hover {
+  transform: scale(1.1); /* Enlarge on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+.telegram-icon-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.telegram-icon {
+  color: #c19c07; ; /* Icon color */
+  font-size: 40px !important; /* Icon size */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .telegram-icon-container,
+  .phone-icon-container {
+    width: 50px; /* Smaller size for phones */
+    height: 50px; /* Smaller size for phones */
+    }
+.phone-icon-container{
+  bottom: 140px;
+}
+  .telegram-icon {
+    font-size: 30px !important; /* Adjust icon size */
+  }
+}

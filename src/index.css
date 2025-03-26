@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+:root {
+  /* Font */
+  --font-base: "Roboto", sans-serif; /* A more modern, clean font */
+
+  /* Colors */
+  --primary-color: #f7e7b4;  /* Light yellow background */
+  --secondary-color: #000000; /* Black for text and highlights */
+  --accent-color: #ffcc00; /* Bright yellow for call-to-action buttons or highlights */
+  --lightGray-color: #f5f5f5; /* Light gray for secondary elements */
+  --gray-color: #666666; /* Darker gray for text */
+  --white-color: #ffffff; /* White for clean spaces and borders */
+}
+
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+img {
+  pointer-events: none;
+}
