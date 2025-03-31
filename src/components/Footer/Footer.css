@@ -1,21 +1,25 @@
 .app__footer {
   width: 100%;
   display: flex;
-  justify-content: space-between !important;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #2f2e41;
+  padding: 1.5rem 2rem;
+  background-color: #353535;
+  color: #fff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Adding shadow for depth */
 }
 
 @media screen and (max-width: 500px) {
   .app__footer {
     flex-direction: column;
+    align-items: center;
+    padding: 1rem;
   }
 }
 
 @media screen and (min-width: 2000px) {
   .app__footer {
-    padding: 2rem;
+    padding: 3rem;
   }
 }
 
@@ -26,12 +30,15 @@
 }
 
 .app__footer-contacts div {
-  transition: all 0.25s ease-in-out;
-  margin: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  margin: 0.75rem;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--white-color);
+  width: 50px;  /* Slightly larger icons */
+  height: 50px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .app__footer-contacts div a {
@@ -43,45 +50,46 @@
 }
 
 .app__footer-contacts div a svg {
-  width: 20px;
-  height: 20px;
-  color: var(--white-color);
+  width: 24px; /* Larger icons for better visibility */
+  height: 24px;
+  color: #fff;
+  transition: all 0.3s ease;
 }
 
 .app__footer-contacts div:hover {
-  background-color: var(--white-color);
+  background-color: #fff;
 }
 
-.app__footer-contacts div:hover svg {
-  color: #2f2e41;
+.app__footer-contacts div:hover a svg {
+  color: #2f2e41; /* Dark color on hover */
 }
 
 @media screen and (max-width: 500px) {
   .app__footer-contacts {
     margin-left: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .app__footer-contacts div {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   }
 
   .app__footer-contacts div a svg {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
   }
 }
 
 @media screen and (min-width: 2000px) {
   .app__footer-contacts div {
-    width: 50px;
-    height: 50px;
+    width: 60px; /* Larger icons for large screens */
+    height: 60px;
   }
 
   .app__footer-contacts div a svg {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -93,10 +101,19 @@
   text-align: center;
   text-transform: uppercase;
   margin: 0.25rem 0;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
 @media screen and (max-width: 500px) {
   .app__footer-copyrights {
     margin-right: 0;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .app__footer-copyrights p {
+    font-size: 12px;
+    letter-spacing: 0.5px;
   }
 }

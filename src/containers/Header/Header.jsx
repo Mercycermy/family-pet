@@ -54,7 +54,7 @@ const Header = () => {
         <p>Where healthy, happy pets and top-quality care meet. Adopt your new furry friend, find premium pet food, or book expert training. Your pet’s perfect match is just a click away.
           <samp>At Family Pet Shop, you deserve one more family.</samp>
         </p>
-        <a href="tel:+1234567890" className="contact-btn">
+        <a href="tel:+251913823747" className="contact-btn">
           Contact Us
         </a>
       </motion.div>

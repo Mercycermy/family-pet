@@ -6,6 +6,7 @@ import {
   Header,
   Testimonial,
   Pets,
+  Faq,
 } from "./containers";
 import TelegramIcon from './components/ScrollToTop/Telegramicon';
 
@@ -19,6 +20,7 @@ const App = () => {
       <Header />
       <About />
       <Pets />
+      <Faq />
       <Testimonial />
       <Contact />
       <Footer />

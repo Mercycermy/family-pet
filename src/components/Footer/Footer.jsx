@@ -1,9 +1,9 @@
 import React from "react";
-import { BsInstagram } from "react-icons/bs";
-import { GrLinkedinOption } from "react-icons/gr";
-import { FaFacebookF } from "react-icons/fa";
+import { BsTelegram } from "react-icons/bs";
+import { FaTiktok } from "react-icons/fa";
+import { MdLocationOn } from "react-icons/md"; // You can use a map link or an address
 import { motion } from "framer-motion";
-import "./Footer.css"
+import "./Footer.css";
 
 const Footer = () => {
   const parentVariant = {
@@ -52,18 +52,17 @@ const Footer = () => {
         variants={parentVariant}
         whileInView="view"
       >
-        {[
-          {
-            href: "https://www.linkedin.com/Helix4",
-            icon: <GrLinkedinOption />,
+        {[{
+            href: "https://t.me/familypetshoporg",
+            icon: <BsTelegram />,
           },
           {
-            href: "https://www.facebook.com/praveenterax",
-            icon: <FaFacebookF />,
+            href: "https://www.tiktok.com/@familypetsorg",
+            icon: <FaTiktok />,
           },
           {
-            href: "https://www.instagram.com/helix4",
-            icon: <BsInstagram />,
+            href: "https://www.google.com/maps/place/Your+Store+Location", // You can replace with the actual store location
+            icon: <MdLocationOn />,
           },
         ].map((social, index) => (
           <motion.div
@@ -83,12 +82,13 @@ const Footer = () => {
           </motion.div>
         ))}
       </motion.div>
+
       <motion.div
         className="app__footer-copyrights"
         variants={parentVariant}
         whileInView="view"
       >
-        {["&copy; 2024 HELIX", "ALL RIGHTS RESERVED"].map((text, index) => (
+        {["&copy; 2024 FAMILY PET SHOP", "ALL RIGHTS RESERVED"].map((text, index) => (
           <motion.p
             className="p-text"
             key={index}

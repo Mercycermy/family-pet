@@ -10,96 +10,89 @@
     }
   }
 }
-/* Container for the header */
+
+/* HEADER SECTION */
 .app__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   height: 100vh;
   padding: 0 2rem;
+  margin-top: 50px;
   position: relative;
-  margin-top:50px;
 }
 
-/* Header Info Section - on the right side */
+/* TEXT INFO */
 .app__header-info {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: 100%;
   text-align: left;
+  height: 100%;
   padding: 1rem;
-  
 }
 
 .app__header-info h1 {
   font-size: 2.5rem;
   font-weight: bold;
   color: var(--secondary-color);
-  margin-bottom: 40px; /* Customize your color */
+  margin-bottom: 40px;
 }
 
 .app__header-info p {
   font-size: 1.2rem;
-  color: var(--gray-color); /* Customize your color */
+  color: var(--gray-color);
 }
 
+/* CONTACT BUTTON */
+.contact-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  background-color: var(--primary-color);
+  color: var(--black-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
+.contact-btn:hover {
+  background-color: var(--lightGray-color);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
 
-/* Circle Section */
+.contact-btn:active {
+  background-color: var(--brown-color);
+  transform: translateY(0);
+}
+
+/* CIRCLE IMAGE SECTION */
 .app__header-circles {
   flex: 1;
   display: flex;
-  justify-content: left; /* Align circle to the left */
+  justify-content: left;
   align-items: center;
   margin-left: 20rem;
 }
 
 .circle-cmp {
-  width: 450px;  /* Increase size of the circle */
-  height: 450px; /* Increase size of the circle */
+  width: 450px;
+  height: 450px;
   border-radius: 50%;
   background-color: var(--white-color);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
-}
-.down-arrow {
-  position: absolute;  /* Position relative to the header section */
-  bottom: 60px;  /* Position the arrow 20px from the bottom of the header section */
-  left: 50%;  /* Center horizontally */
-  transform: translateX(-50%);  /* Adjust for perfect centering */
-  font-size: 2rem;
-  color: var(--secondary-color);
-  text-align: center;
-  cursor: pointer;
-}
-
-.arrow {
-  font-size: 2.5rem; /* Size of the arrow */
-  animation: bounce 1.5s infinite ease-in-out;
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .down-arrow {
-    font-size: 1.5rem;
-  }
 }
 
 .circle-cmp img {
@@ -109,7 +102,7 @@
   pointer-events: none;
 }
 
-/* Header Image */
+/* HEADER IMAGE */
 .app__header-img {
   flex: 1;
   height: 100%;
@@ -135,84 +128,115 @@
   height: 90%;
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 1200px) {
-  .app__header-circles {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    justify-content: center; /* Center the circle vertically */
-    margin-left: 0;
-  }
-
-  .circle-cmp {
-    width: 300px; /* Adjust circle size for smaller screens */
-    height: 300px;
-    margin: 1rem 0; /* Add margin for spacing */
-  }
-
+/* DOWN ARROW */
+.down-arrow {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: var(--secondary-color);
+  text-align: center;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
-  .circle-cmp {
-    width: 250px;  /* Further adjust size for very small screens */
-    height: 250px;
-  }
+.arrow {
+  font-size: 2.5rem;
+  animation: bounce 1.5s infinite ease-in-out;
 }
 
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+
+/* RESPONSIVENESS */
+
+/* Tablet & Small Desktop */
 @media screen and (max-width: 1200px) {
   .app__header {
     flex-direction: column;
     align-items: center;
+    height: auto;
+    margin-top: 30px;
+    padding: 1rem;
   }
 
   .app__header-info {
     text-align: center;
-    margin: 1rem;
-  }
-
-  .app__header-img {
-    width: 100%;
-    margin-bottom: 1rem;
+    align-items: center;
   }
 
   .app__header-circles {
     flex-direction: row;
     justify-content: center;
+    margin: 2rem 0;
+    margin-left: 0;
+  }
+
+  .circle-cmp {
+    width: 300px;
+    height: 300px;
+  }
+
+  .app__header-img {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     margin-top: 1rem;
   }
-}
-/* Contact Us Button Styling */
-.contact-btn {
-  display: inline-block;
-  padding: 1rem 2rem;
-  margin-top: 2rem;
-  background-color: var(--primary-color); /* Light Yellow or White */
-  color: var(--black-color);  /* Black Text */
-  font-size: 1.2rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  border-radius: 30px;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
 
-/* Hover Effect */
-.contact-btn:hover {
-  background-color: var(--lightGray-color); /* Dark Blue on Hover */
-  transform: translateY(-5px); /* Slight movement to appear as if it's floating */
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-}
-
-/* Active State */
-.contact-btn:active {
-  background-color: var(--brown-color); /* Brownish color when clicked */
-  transform: translateY(0);
-}
-
-/* Button Styling for Mobile */
-@media screen and (max-width: 1200px) {
   .contact-btn {
     padding: 0.8rem 1.8rem;
     font-size: 1rem;
+  }
+
+  .down-arrow {
+    font-size: 1.5rem;
+    bottom: 40px;
+  }
+
+  .arrow {
+    font-size: 2rem;
+  }
+}
+
+/* Phones */
+@media screen and (max-width: 768px) {
+  .app__header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding-top: 4rem;
+  }
+
+  .app__header-info h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .app__header-info p {
+    font-size: 1rem;
+  }
+
+  .circle-cmp {
+    width: 220px;
+    height: 220px;
+  }
+
+  .contact-btn {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+  }
+
+  .down-arrow {
+    font-size: 1.2rem;
+    bottom: 5px;
+  }
+
+  .arrow {
+    font-size: 1.8rem;
   }
 }

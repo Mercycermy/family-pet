@@ -38,6 +38,7 @@ const Navbar = () => {
           "home",
           "about",
           "pets",
+          "faq",
           "testimonials",
           "contact",
         ].map((item) => (
@@ -65,6 +66,7 @@ const Navbar = () => {
                 "home",
                 "about",
                 "pets",
+                "faq",
                 "testimonials",
                 "contact",
               ].map((item) => (

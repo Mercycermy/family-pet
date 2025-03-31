@@ -22,7 +22,7 @@ const TelegramIcon = () => {
     <div >
     <div className="scroll-top" style={TelegramStyle}>
       <a
-        href="https://t.me/Empirepharmacyy"
+        href="https://t.me/Familypetsorg"
         aria-label="Go to Telegram"
         target="_blank"
         rel="noreferrer"
@@ -36,7 +36,7 @@ const TelegramIcon = () => {
     {/* Phone Icon */}
     <div className="scroll-top phone-icon-container" style={PhoneStyle}>
         <a
-          href="tel:+251908779999"
+          href="tel:+251903190203"
           aria-label="Call Phone"
         >
           <div className="telegram-icon-circle">

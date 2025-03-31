@@ -341,10 +341,7 @@
     height: 45px;
   }
 
-  .arrow-button.left,
-  .arrow-button.right {
-    display: none; /* Optional: hide arrows for smallest screens */
-  }
+  
 }
 /* Info Section */
 .pet-info-section {
@@ -448,4 +445,5 @@
     font-size: 0.9rem;
     padding: 5px 0;
   }
+  
 }
