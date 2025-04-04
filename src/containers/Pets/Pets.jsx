@@ -40,13 +40,13 @@ const Pets = () => {
   return (
     <>
       <h2 className="head-text">
-        Meet Our <span> Pets</span>
+        Meet Our <span> Pets and product</span>
       </h2>
 
       {!selectedPet && (
         <>
           <div className="app__work-filter">
-            {["All", "Cat", "Dog", "Bird", "Fish", "Others", "Accessories", "Food"].map((type, index) => (
+            {["All", "Cat", "Dog", "Bird", "Bunny", "Others", "Dog Accessories", "Pet Food"].map((type, index) => (
               <div
                 key={index}
                 onClick={() => handleFilter(type)}

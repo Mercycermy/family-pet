@@ -83,7 +83,7 @@ const Faq = () => {
             </div>
             {openIndex === index && (
               <motion.p
-                className="faq__answer p-text"
+                className="faq__answers p-text"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}

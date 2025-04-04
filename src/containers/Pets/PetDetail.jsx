@@ -76,10 +76,12 @@ const PetDetail = ({ pet, onBack, dogBreeds }) => {
         <div className="pet-info-section">
           <h2 className="pet-title">{pet.title}</h2>
           <p className="pet-description">{pet.description}</p>
+          <p><strong>Price:</strong> {pet.price}</p>
 
           {pet.breedDetails && (
             <div className="breed-detail-section">
               <h3 className="breed-title">Breed Details</h3>
+              <p><strong>Name:</strong> {pet.breedDetails.name}</p>
               <p><strong>Origin:</strong> {pet.breedDetails.origin}</p>
               <p><strong>Size:</strong> {pet.breedDetails.size}</p>
               <p><strong>Appearance:</strong> {pet.breedDetails.appearance}</p>
@@ -89,7 +91,10 @@ const PetDetail = ({ pet, onBack, dogBreeds }) => {
           )}
 
           <div className="contact-action">
-            <button className="contact-button">📞 Contact</button>
+                    <button className="contact-button" onClick={() => window.location.href = "tel:+251913823747"}>
+            📞 Contact
+          </button>
+
           </div>
         </div>
       </div>
